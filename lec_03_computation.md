@@ -283,12 +283,12 @@ There are several concerns that are raised by this definition:
 These concerns will to a large extent guide us in the upcoming chapters. Thus you would be well advised to re-read the above informal definition and see what you think about these issues.
 
 
-A large part of this course will be devoted to adressing the above issues.
+A large part of this course will be devoted to addressing the above issues.
 We will see that:
 
 1. We can make the definition of an algorithm fully formal, and so give a precise mathematical meaning to statements such as "Algorithm $A$ computes function $F$".
 
-2. While the choice of $NAND$ is arbitrary, and we could just as well chose some other functions, we will also see this choice does not matter much. Our notion of an algorithm is not more restrictive because we only think of $NAND$ as a basic step. We have already seen that allowing $AND$, $OR$, $NOT$ as basic operations will not add any power (because we can compute them from $NAND$'s via [univnandonethm](){.ref}). We will see that the same is true for addition, multiplication, and essentially every other operation that could be reasonably thought of as a basic step.
+2. While the choice of $NAND$ is arbitrary, and we could just as well choose some other functions, we will also see this choice does not matter much. Our notion of an algorithm is not more restrictive because we only think of $NAND$ as a basic step. We have already seen that allowing $AND$, $OR$, $NOT$ as basic operations will not add any power (because we can compute them from $NAND$'s via [univnandonethm](){.ref}). We will see that the same is true for addition, multiplication, and essentially every other operation that could be reasonably thought of as a basic step.
 
 3. It turns out that we can and do compute such "$NAND$ based algorithms" in the real world. First of all, such an algorithm is clearly well specified, and so can be executed by a human with a pen and paper. Second, there are a variety of ways to _mechanize_ this computation. We've already seen that we can write Python code that corresponds to following such a list of instructions. But in fact we can directly implement operations such as $NAND$, $AND$, $OR$, $NOT$ etc.. via electronic signals using components known as _transistors_. This is how modern electronic computers operate.
 
@@ -311,7 +311,7 @@ We can describe the computation of a  function $F:\{0,1\}^n \rightarrow \{0,1\}$
 Since in our case, all the gates are the same function (i.e., $NAND$), the description of the circuit is even simpler.
 We can think of the circuit as a directed graph.
 It has a vertex for every one of the input bits, and also for every intermediate  value  we use in our computation.
-If we compute a value $u$ by applying $NAND$ to $v$ and $w$ then we put a directed edges from $v$ to $u$ and from $w$ to $u$.
+If we compute a value $u$ by applying $NAND$ to $v$ and $w$ then we put directed edges from $v$ to $u$ and from $w$ to $u$.
 We will follow the convention of using  "$x$" for inputs and "$y$" for outputs, and hence write $x_0,x_1,\ldots$ for our inputs and $y_0,y_1,\ldots$ for our outputs. (We will sometimes also write these as `X[0]`,`X[1]`,$\ldots$ and  `Y[0]`,`Y[1]`,$\ldots$ respectively.)
 Here is a more formal definition:
 
